@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from datetime import date
 from django.utils.translation import gettext as _
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 from django.db import models
 
@@ -15,7 +16,7 @@ class Employee(models.Model):
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=20)
     state = models.CharField(max_length=15, default='Karnataka')
-    pincode = models.IntegerField()
+    pincode = models.IntegerField(validators=[MaxValueValidator(999999), MinValueValidator(100000)], )
     joining_date = models.DateField(_("Date"), default=date.today)
     marital_status = models.CharField(max_length=10)
     designation = models.CharField(max_length=30)

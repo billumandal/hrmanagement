@@ -57,8 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, '/register/templates/register'),
-            os.path.join(BASE_DIR, '/basehr/templates/basehr')
+            os.path.join(BASE_DIR, 'register/'),
+            os.path.join(BASE_DIR, 'basehr/templates/basehr')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

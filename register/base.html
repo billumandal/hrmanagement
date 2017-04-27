@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>{% block title %}Login Page {% super %}{% endblock %}</title>
+    <title>{% block title %}H R Management {{ block.super }}{% endblock %}</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -13,7 +13,7 @@
     <div class="page-header">
         {% if user.is_authenticated %}
             <a href="{% url 'logout' %}" class="top-menu"><span class="glyphicon glyphicon-log-out"></span></a>
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'employee_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% else %}
             <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-log-in"></span></a>
         {% endif %}

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for employees in employees %}
-        <div  class="post">
-            <h2><a href="{% url 'employee_detail' pk=pk %}">{{ employee.emp_id }}:- {{ post.firstname }} {{employee.middlename}} {{ employee.lastname }}</a></h2>
+    {% for employee in employees %}
+        <div  class="employee">
+            <h2><a href="{% url 'employee_detail' pk=pk %}">{{ employee.emp_id }}:- {{ employee.firstname }} {{employee.middlename}} {{ employee.lastname }}</a></h2>
             <p>{{ employee.designation | linebreaksbr }}</p>
             <p>{{ employee.emp_department | linebreaksbr }}</p>
         </div>
